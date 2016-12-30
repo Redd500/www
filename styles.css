@@ -3,3 +3,10 @@ h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
 }
+
+body {
+  background-color: #d8fbff;
+  height: 95vh;
+  min-height: 600px;
+  min-width: 800px;
+}
