@@ -50,10 +50,10 @@ export class GameInfo {
 		this.miniTicksToTick = 20;
 		this.miniTicks = 20;
 		
-		this.maxEnemies = 3;
+		this.maxEnemies = 10;
 		this.enemies = [];
 		
-		this.maxHeroes = 3;
+		this.maxHeroes = 6;
 		this.heroes = [];
 		
 		this.allEnemyInfo = [ new BanditInfo(), new WolfInfo() ];
