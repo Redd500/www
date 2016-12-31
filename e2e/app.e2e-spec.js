@@ -1,12 +1,13 @@
 "use strict";
-var protractor_1 = require('protractor');
-describe('QuickStart E2E Tests', function () {
-    var expectedMsg = 'Hello Angular';
+var app_po_1 = require('./app.po');
+describe('angular-quickstart App', function () {
+    var page;
     beforeEach(function () {
-        protractor_1.browser.get('');
+        page = new app_po_1.AngularQuickstartPage();
     });
-    it('should display: ' + expectedMsg, function () {
-        expect(protractor_1.element(protractor_1.by.css('h1')).getText()).toEqual(expectedMsg);
+    it('should display message saying app works', function () {
+        page.navigateTo();
+        expect(page.getParagraphText()).toEqual('app works!');
     });
 });
 //# sourceMappingURL=app.e2e-spec.js.map
