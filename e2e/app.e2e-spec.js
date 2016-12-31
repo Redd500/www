@@ -1,5 +1,5 @@
 "use strict";
-var app_po_1 = require('./app.po');
+var app_po_1 = require("./app.po");
 describe('angular-quickstart App', function () {
     var page;
     beforeEach(function () {

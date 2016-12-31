@@ -1,5 +1,5 @@
 "use strict";
-var dead_hero_1 = require('./dead-hero');
+var dead_hero_1 = require("./dead-hero");
 var DeadHeroInfo = (function () {
     function DeadHeroInfo() {
         this.maxHealth = 1;

@@ -1,6 +1,6 @@
 "use strict";
-var bandit_1 = require('./bandit');
-var strike_info_1 = require('./strike-info');
+var bandit_1 = require("./bandit");
+var strike_info_1 = require("./strike-info");
 var BanditInfo = (function () {
     function BanditInfo() {
         this.bounty = 5;

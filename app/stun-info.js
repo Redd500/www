@@ -1,5 +1,5 @@
 "use strict";
-var stun_1 = require('./stun');
+var stun_1 = require("./stun");
 var StunInfo = (function () {
     function StunInfo() {
         this.maxTicks = 2;

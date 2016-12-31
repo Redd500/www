@@ -1,5 +1,5 @@
 "use strict";
-var bleed_1 = require('./bleed');
+var bleed_1 = require("./bleed");
 var BleedInfo = (function () {
     function BleedInfo() {
         this.damage = 1;

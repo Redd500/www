@@ -1,6 +1,6 @@
 "use strict";
-var warrior_1 = require('./warrior');
-var strike_info_1 = require('./strike-info');
+var warrior_1 = require("./warrior");
+var strike_info_1 = require("./strike-info");
 var WarriorInfo = (function () {
     function WarriorInfo() {
         this.maxHealth = 100;

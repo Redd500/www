@@ -1,12 +1,12 @@
 "use strict";
-var enemy_slot_1 = require('./enemy-slot');
-var hero_slot_1 = require('./hero-slot');
-var bandit_info_1 = require('./bandit-info');
-var warrior_info_1 = require('./warrior-info');
-var black_mage_info_1 = require('./black-mage-info');
-var wolf_info_1 = require('./wolf-info');
-var dead_hero_info_1 = require('./dead-hero-info');
-var dead_enemy_info_1 = require('./dead-enemy-info');
+var enemy_slot_1 = require("./enemy-slot");
+var hero_slot_1 = require("./hero-slot");
+var bandit_info_1 = require("./bandit-info");
+var warrior_info_1 = require("./warrior-info");
+var black_mage_info_1 = require("./black-mage-info");
+var wolf_info_1 = require("./wolf-info");
+var dead_hero_info_1 = require("./dead-hero-info");
+var dead_enemy_info_1 = require("./dead-enemy-info");
 var GameInfo = (function () {
     function GameInfo() {
         this.title = 'Wonderful Web War';
@@ -15,11 +15,11 @@ var GameInfo = (function () {
         this.maxHeroCostMultiplier = 1.1;
         this.maxEnemyCost = 50;
         this.maxEnemyCostMultiplier = 1.07;
-        this.miniTicksToTick = 20;
-        this.miniTicks = 20;
-        this.maxEnemies = 3;
+        this.miniTicksToTick = 5;
+        this.miniTicks = 5;
+        this.maxEnemies = 10;
         this.enemies = [];
-        this.maxHeroes = 3;
+        this.maxHeroes = 6;
         this.heroes = [];
         this.allEnemyInfo = [new bandit_info_1.BanditInfo(), new wolf_info_1.WolfInfo()];
         this.allHeroInfo = [new warrior_info_1.WarriorInfo(), new black_mage_info_1.BlackMageInfo()];

@@ -47,8 +47,8 @@ export class GameInfo {
 		this.maxEnemyCost = 50;
 		this.maxEnemyCostMultiplier = 1.07;
 		
-		this.miniTicksToTick = 20;
-		this.miniTicks = 20;
+		this.miniTicksToTick = 5;
+		this.miniTicks = 5;
 		
 		this.maxEnemies = 10;
 		this.enemies = [];

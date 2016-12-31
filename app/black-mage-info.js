@@ -1,8 +1,8 @@
 "use strict";
-var black_mage_1 = require('./black-mage');
-var fireball_info_1 = require('./fireball-info');
-var lightning_bolt_info_1 = require('./lightning-bolt-info');
-var blizzard_info_1 = require('./blizzard-info');
+var black_mage_1 = require("./black-mage");
+var fireball_info_1 = require("./fireball-info");
+var lightning_bolt_info_1 = require("./lightning-bolt-info");
+var blizzard_info_1 = require("./blizzard-info");
 var BlackMageInfo = (function () {
     function BlackMageInfo() {
         this.maxHealth = 20;

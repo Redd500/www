@@ -1,6 +1,6 @@
 "use strict";
-var bleed_info_1 = require('./bleed-info');
-var tear_into_1 = require('./tear-into');
+var bleed_info_1 = require("./bleed-info");
+var tear_into_1 = require("./tear-into");
 var TearIntoInfo = (function () {
     function TearIntoInfo() {
         this.cooldown = 7;

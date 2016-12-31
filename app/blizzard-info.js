@@ -1,5 +1,5 @@
 "use strict";
-var blizzard_1 = require('./blizzard');
+var blizzard_1 = require("./blizzard");
 var BlizzardInfo = (function () {
     function BlizzardInfo() {
         this.cooldown = 12;

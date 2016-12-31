@@ -1,6 +1,6 @@
 "use strict";
-var stun_info_1 = require('./stun-info');
-var lightning_bolt_1 = require('./lightning-bolt');
+var stun_info_1 = require("./stun-info");
+var lightning_bolt_1 = require("./lightning-bolt");
 var LightningBoltInfo = (function () {
     function LightningBoltInfo() {
         this.cooldown = 8;

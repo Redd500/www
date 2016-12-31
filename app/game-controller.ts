@@ -25,7 +25,7 @@ export class GameController {
 	}
 	
 	ngOnInit() {
-		setInterval(() => this.nextTick(), 50);
+		setInterval(() => this.nextTick(), 200);
 	}
 	
 	nextTick(): void {

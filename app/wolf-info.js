@@ -1,6 +1,6 @@
 "use strict";
-var wolf_1 = require('./wolf');
-var tear_into_info_1 = require('./tear-into-info');
+var wolf_1 = require("./wolf");
+var tear_into_info_1 = require("./tear-into-info");
 var WolfInfo = (function () {
     function WolfInfo() {
         this.bounty = 8;

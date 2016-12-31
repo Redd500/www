@@ -1,5 +1,5 @@
 "use strict";
-var dead_enemy_1 = require('./dead-enemy');
+var dead_enemy_1 = require("./dead-enemy");
 var DeadEnemyInfo = (function () {
     function DeadEnemyInfo() {
         this.bounty = 0;

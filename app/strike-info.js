@@ -1,5 +1,5 @@
 "use strict";
-var strike_1 = require('./strike');
+var strike_1 = require("./strike");
 var StrikeInfo = (function () {
     function StrikeInfo() {
         this.cooldown = 3;
