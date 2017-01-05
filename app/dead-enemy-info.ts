@@ -12,12 +12,10 @@ export class DeadEnemyInfo implements EnemyInfo {
 	speedPriority: number = 0;
 	damagePriority: number = 0;
 	
-	defense: number = 0;
-	
 	abilities: AbilityInfo[] = [];
 	statusEffects: EffectInfo[] = [];
 	
 	createEnemy(): Enemy {
-		return new DeadEnemy(this.bounty, this.maxHealth, this.speedPriority, this.damagePriority, this.defense, this.abilities, this.statusEffects);
+		return new DeadEnemy(this.bounty, this.maxHealth, this.speedPriority, this.damagePriority, this.abilities, this.statusEffects);
 	}
 }

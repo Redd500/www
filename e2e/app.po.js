@@ -1,5 +1,5 @@
 "use strict";
-var protractor_1 = require("protractor");
+var protractor_1 = require('protractor');
 var AngularQuickstartPage = (function () {
     function AngularQuickstartPage() {
     }

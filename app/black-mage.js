@@ -1,12 +1,16 @@
 "use strict";
+var stat_1 = require('./stat');
 var BlackMage = (function () {
-    function BlackMage(hlth, spd, dmg, def, abl, eff) {
+    function BlackMage(hlth, spd, dmg, abl, eff) {
         this.name = "Black Mage";
         this.maxHealth = hlth;
         this.health = hlth;
         this.speedPriority = spd;
         this.damagePriority = dmg;
-        this.defense = def;
+        this.stats = [
+            new stat_1.Stat('Speed Priority', 'This determines who gets to use their abilities first, from highest to lowest priority', spd),
+            new stat_1.Stat('Damage Priority', 'This determines who gets attacked by their opponents\' abilities first, from highest to lowest priority', dmg)
+        ];
         var newAbl = [];
         for (var _i = 0, abl_1 = abl; _i < abl_1.length; _i++) {
             var x = abl_1[_i];
@@ -48,7 +52,7 @@ var BlackMage = (function () {
         }
     };
     BlackMage.prototype.takeHit = function (pwr, eff) {
-        this.health -= pwr - this.defense;
+        this.health -= pwr;
         for (var _i = 0, eff_2 = eff; _i < eff_2.length; _i++) {
             var x = eff_2[_i];
             this.statusEffects.push(x.createStatusEffect());

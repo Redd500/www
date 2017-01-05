@@ -13,12 +13,10 @@ export class WolfInfo implements EnemyInfo {
 	speedPriority: number = 2;
 	damagePriority: number = 5;
 	
-	defense: number = 0;
-	
 	abilities: AbilityInfo[] = [ new TearIntoInfo() ];
 	statusEffects: EffectInfo[] = [];
 	
 	createEnemy(): Enemy {
-		return new Wolf(this.bounty, this.maxHealth, this.speedPriority, this.damagePriority, this.defense, this.abilities, this.statusEffects);
+		return new Wolf(this.bounty, this.maxHealth, this.speedPriority, this.damagePriority, this.abilities, this.statusEffects);
 	}
 }

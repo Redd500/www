@@ -8,8 +8,6 @@ export interface HeroInfo {
 	speedPriority: number;
 	damagePriority: number;
 	
-	defense: number;
-	
 	abilities: AbilityInfo[];
 	statusEffects: EffectInfo[];
 	

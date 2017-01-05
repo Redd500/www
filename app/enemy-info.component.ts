@@ -18,6 +18,20 @@ import { EnemySlot } from './enemy-slot';
 			Respawn: {{slot.respawn}}
 		</div>
 		<div class="stats">
+			<div class="infoTitle">
+				Stats
+			</div>
+			<div class="listSlot" *ngFor="let stat of slot.enemy.stats">
+				<div class="statName">
+					{{stat.name}}
+				</div>
+				<div class="statPower">
+					{{stat.power}}
+				</div>
+				<div class="description">
+					{{stat.description}}
+				</div>
+			</div>
 		</div>
 		<div class="container">
 			<div class="abilities">
@@ -128,6 +142,25 @@ import { EnemySlot } from './enemy-slot';
 		
 		.listSlot {
 			margin-top: 10px;
+		}
+		
+		.description {
+			border: 2px solid;
+			margin: 1px;
+			padding: 2px;
+			background-color: #f6f6f6;
+			display: none;
+			position: absolute;
+			width: 300px;
+			z-index: 100;
+		}
+		
+		.listSlot:hover .description {
+			display: block;
+		}
+		
+		.listSlot:hover .description:hover {
+			display: none;
 		}
 	`]
 })

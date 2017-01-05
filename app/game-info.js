@@ -1,12 +1,12 @@
 "use strict";
-var enemy_slot_1 = require("./enemy-slot");
-var hero_slot_1 = require("./hero-slot");
-var bandit_info_1 = require("./bandit-info");
-var warrior_info_1 = require("./warrior-info");
-var black_mage_info_1 = require("./black-mage-info");
-var wolf_info_1 = require("./wolf-info");
-var dead_hero_info_1 = require("./dead-hero-info");
-var dead_enemy_info_1 = require("./dead-enemy-info");
+var enemy_slot_1 = require('./enemy-slot');
+var hero_slot_1 = require('./hero-slot');
+var bandit_info_1 = require('./bandit-info');
+var warrior_info_1 = require('./warrior-info');
+var black_mage_info_1 = require('./black-mage-info');
+var wolf_info_1 = require('./wolf-info');
+var dead_hero_info_1 = require('./dead-hero-info');
+var dead_enemy_info_1 = require('./dead-enemy-info');
 var GameInfo = (function () {
     function GameInfo() {
         this.title = 'Wonderful Web War';

@@ -4,6 +4,7 @@ import { AbilityInfo } from './ability-info.interface';
 import { Effect } from './effect.interface';
 import { EffectInfo } from './effect-info.interface';
 import { GameInfo } from './game-info';
+import { Stat } from './stat';
 
 export class Bandit implements Enemy {
 	name: string;
@@ -16,19 +17,23 @@ export class Bandit implements Enemy {
 	speedPriority: number;
 	damagePriority: number;
 	
-	defense: number;
-	
 	abilities: Ability[];
 	statusEffects: Effect[];
 	
-	constructor(bnty: number, hlth: number, spd: number, dmg: number, def: number, abl: AbilityInfo[], eff: EffectInfo[]) {
+	stats: Stat[];
+	
+	constructor(bnty: number, hlth: number, spd: number, dmg: number, abl: AbilityInfo[], eff: EffectInfo[]) {
 		this.name = "Bandit";
 		this.bounty = bnty;
 		this.maxHealth = hlth;
 		this.health = hlth;
 		this.speedPriority = spd;
 		this.damagePriority = dmg;
-		this.defense = def;
+		this.stats = [
+			new Stat('Speed Priority', 'This determines who gets to use their abilities first, from highest to lowest priority', spd),
+			new Stat('Damage Priority', 'This determines who gets attacked by their opponents\' abilities first, from highest to lowest priority', dmg),
+			new Stat('Bounty', 'The amount of money you\'ll earn for defeating this enemy', bnty)
+		];
 		
 		let newAbl: Ability[] = [];
 		
@@ -73,7 +78,7 @@ export class Bandit implements Enemy {
 	}
 	
 	takeHit(pwr: number, eff: EffectInfo[]): void {
-		this.health -= pwr - this.defense;
+		this.health -= pwr;
 		for (let x of eff) {
 			this.statusEffects.push(x.createStatusEffect());
 		}

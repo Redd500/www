@@ -8,8 +8,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-var game_info_1 = require("./game-info");
-var core_1 = require("@angular/core");
+var game_info_1 = require('./game-info');
+var core_1 = require('@angular/core');
 var GameController = (function () {
     function GameController() {
         this.game = new game_info_1.GameInfo();
@@ -48,17 +48,17 @@ var GameController = (function () {
             }
         }
     };
+    GameController = __decorate([
+        core_1.Component({
+            moduleId: module.id,
+            selector: 'game',
+            template: "\n\t\t<game-info [game]=\"game\"></game-info>\n\t",
+            styles: ["\n\t\t:host {\n\t\t\tdisplay: block;\n\t\t\theight: 100%;\n\t\t}\n\t"]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], GameController);
     return GameController;
 }());
-GameController = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: 'game',
-        template: "\n\t\t<game-info [game]=\"game\"></game-info>\n\t",
-        styles: ["\n\t\t:host {\n\t\t\tdisplay: block;\n\t\t\theight: 100%;\n\t\t}\n\t"]
-    }),
-    __metadata("design:paramtypes", [])
-], GameController);
 exports.GameController = GameController;
 var game = new GameController();
 //# sourceMappingURL=game-controller.js.map

@@ -13,12 +13,10 @@ export class BlackMageInfo implements HeroInfo {
 	speedPriority: number = 0.6;
 	damagePriority: number = 2;
 	
-	defense: number = 0;
-	
 	abilities: AbilityInfo[] = [ new FireballInfo(), new LightningBoltInfo(), new BlizzardInfo() ];
 	statusEffects: EffectInfo[] = [];
 	
 	createHero(): Hero {
-		return new BlackMage(this.maxHealth, this.speedPriority, this.damagePriority, this.defense, this.abilities, this.statusEffects);
+		return new BlackMage(this.maxHealth, this.speedPriority, this.damagePriority, this.abilities, this.statusEffects);
 	}
 }

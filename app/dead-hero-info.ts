@@ -10,12 +10,10 @@ export class DeadHeroInfo implements HeroInfo {
 	speedPriority: number = 0;
 	damagePriority: number = 0;
 	
-	defense: number = 0;
-	
 	abilities: AbilityInfo[] = [];
 	statusEffects: EffectInfo[] = [];
 	
 	createHero(): Hero {
-		return new DeadHero(this.maxHealth, this.speedPriority, this.damagePriority, this.defense, this.abilities, this.statusEffects);
+		return new DeadHero(this.maxHealth, this.speedPriority, this.damagePriority, this.abilities, this.statusEffects);
 	}
 }

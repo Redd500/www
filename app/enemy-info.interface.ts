@@ -10,8 +10,6 @@ export interface EnemyInfo {
 	speedPriority: number;
 	damagePriority: number;
 	
-	defense: number;
-	
 	abilities: AbilityInfo[];
 	statusEffects: EffectInfo[];
 	

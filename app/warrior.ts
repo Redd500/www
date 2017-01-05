@@ -4,6 +4,7 @@ import { AbilityInfo } from './ability-info.interface';
 import { Effect } from './effect.interface';
 import { EffectInfo } from './effect-info.interface';
 import { GameInfo } from './game-info';
+import { Stat } from './stat';
 
 export class Warrior implements Hero {
 	name: string;
@@ -19,6 +20,8 @@ export class Warrior implements Hero {
 	abilities: Ability[];
 	statusEffects: Effect[];
 	
+	stats: Stat[];
+	
 	constructor(hlth: number, spd: number, dmg: number, def: number, abl: AbilityInfo[], eff: EffectInfo[]) {
 		this.name = "Warrior";
 		this.maxHealth = hlth;
@@ -26,6 +29,11 @@ export class Warrior implements Hero {
 		this.speedPriority = spd;
 		this.damagePriority = dmg;
 		this.defense = def;
+		this.stats = [
+			new Stat('Speed Priority', 'This determines who gets to use their abilities first, from highest to lowest priority', spd),
+			new Stat('Damage Priority', 'This determines who gets attacked by their opponents\' abilities first, from highest to lowest priority', dmg),
+			new Stat('Defense', 'Every time this unit takes damage from an ability, the damage is reduced by this amount.  Doesn\'t affect status effect damage', def)
+		];
 		
 		let newAbl: Ability[] = [];
 		

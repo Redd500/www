@@ -2,6 +2,7 @@ import { Ability } from './ability.interface';
 import { Effect } from './effect.interface';
 import { EffectInfo } from './effect-info.interface';
 import { GameInfo } from './game-info';
+import { Stat } from './stat';
 
 export interface Enemy {
 	name: string;
@@ -14,10 +15,10 @@ export interface Enemy {
 	speedPriority: number;
 	damagePriority: number;
 	
-	defense: number;
-	
 	abilities: Ability[];
 	statusEffects: Effect[];
+	
+	stats: Stat[];
 	
 	nextTick(game: GameInfo): void;
 	useAbilities(game: GameInfo): void;

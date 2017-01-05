@@ -1,5 +1,5 @@
 "use strict";
-var burn_1 = require("./burn");
+var burn_1 = require('./burn');
 var BurnInfo = (function () {
     function BurnInfo() {
         this.damage = 7;

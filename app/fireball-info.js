@@ -1,6 +1,6 @@
 "use strict";
-var burn_info_1 = require("./burn-info");
-var fireball_1 = require("./fireball");
+var burn_info_1 = require('./burn-info');
+var fireball_1 = require('./fireball');
 var FireballInfo = (function () {
     function FireballInfo() {
         this.cooldown = 5;

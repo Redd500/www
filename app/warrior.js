@@ -1,4 +1,5 @@
 "use strict";
+var stat_1 = require('./stat');
 var Warrior = (function () {
     function Warrior(hlth, spd, dmg, def, abl, eff) {
         this.name = "Warrior";
@@ -7,6 +8,11 @@ var Warrior = (function () {
         this.speedPriority = spd;
         this.damagePriority = dmg;
         this.defense = def;
+        this.stats = [
+            new stat_1.Stat('Speed Priority', 'This determines who gets to use their abilities first, from highest to lowest priority', spd),
+            new stat_1.Stat('Damage Priority', 'This determines who gets attacked by their opponents\' abilities first, from highest to lowest priority', dmg),
+            new stat_1.Stat('Defense', 'Every time this unit takes damage from an ability, the damage is reduced by this amount.  Doesn\'t affect status effect damage', def)
+        ];
         var newAbl = [];
         for (var _i = 0, abl_1 = abl; _i < abl_1.length; _i++) {
             var x = abl_1[_i];
