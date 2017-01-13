@@ -8,10 +8,10 @@ import { EffectInfo } from './effect-info.interface';
 export class WolfInfo implements EnemyInfo {
 	bounty: number = 8;
 
-	maxHealth: number = 50;
+	maxHealth: number = 150;
 	
 	speedPriority: number = 2;
-	damagePriority: number = 5;
+	damagePriority: number = 3;
 	
 	abilities: AbilityInfo[] = [ new TearIntoInfo() ];
 	statusEffects: EffectInfo[] = [];

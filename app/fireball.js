@@ -1,11 +1,19 @@
 "use strict";
+var stat_1 = require('./stat');
 var Fireball = (function () {
-    function Fireball(cd, pwr, eff) {
-        this.name = 'Fireball';
+    function Fireball(nm, cd, pwr, trg, eff, desc) {
+        this.name = nm;
         this.cooldown = cd;
         this.ticks = 0;
         this.power = pwr;
+        this.targets = trg;
+        this.description = desc;
         this.effects = eff;
+        this.stats = [
+            new stat_1.Stat('Cooldown', 'How many ticks it takes for the ability to be used.', cd),
+            new stat_1.Stat('Power', 'The amount of damage this attack will do per hit.', pwr),
+            new stat_1.Stat('Targets', 'The number of opponents that this ability targets', trg)
+        ];
     }
     Fireball.prototype.nextTick = function (spd, game, user) {
         this.ticks += spd;

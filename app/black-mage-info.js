@@ -5,8 +5,8 @@ var lightning_bolt_info_1 = require('./lightning-bolt-info');
 var blizzard_info_1 = require('./blizzard-info');
 var BlackMageInfo = (function () {
     function BlackMageInfo() {
-        this.maxHealth = 20;
-        this.speedPriority = 0.6;
+        this.maxHealth = 80;
+        this.speedPriority = 1;
         this.damagePriority = 2;
         this.abilities = [new fireball_info_1.FireballInfo(), new lightning_bolt_info_1.LightningBoltInfo(), new blizzard_info_1.BlizzardInfo()];
         this.statusEffects = [];

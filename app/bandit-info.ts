@@ -8,9 +8,9 @@ import { EffectInfo } from './effect-info.interface';
 export class BanditInfo implements EnemyInfo {
 	bounty: number = 5;
 
-	maxHealth: number = 80;
+	maxHealth: number = 220;
 	
-	speedPriority: number = 1.1;
+	speedPriority: number = 1;
 	damagePriority: number = 3;
 	
 	abilities: AbilityInfo[] = [ new StrikeInfo() ];

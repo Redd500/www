@@ -4,8 +4,8 @@ var strike_info_1 = require('./strike-info');
 var BanditInfo = (function () {
     function BanditInfo() {
         this.bounty = 5;
-        this.maxHealth = 80;
-        this.speedPriority = 1.1;
+        this.maxHealth = 220;
+        this.speedPriority = 1;
         this.damagePriority = 3;
         this.abilities = [new strike_info_1.StrikeInfo()];
         this.statusEffects = [];

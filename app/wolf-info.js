@@ -4,9 +4,9 @@ var tear_into_info_1 = require('./tear-into-info');
 var WolfInfo = (function () {
     function WolfInfo() {
         this.bounty = 8;
-        this.maxHealth = 50;
+        this.maxHealth = 150;
         this.speedPriority = 2;
-        this.damagePriority = 5;
+        this.damagePriority = 3;
         this.abilities = [new tear_into_info_1.TearIntoInfo()];
         this.statusEffects = [];
     }

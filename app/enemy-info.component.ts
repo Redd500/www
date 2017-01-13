@@ -28,7 +28,7 @@ import { EnemySlot } from './enemy-slot';
 				<div class="statPower">
 					{{stat.power}}
 				</div>
-				<div class="description">
+				<div class="description noMoveOver">
 					{{stat.description}}
 				</div>
 			</div>
@@ -50,6 +50,43 @@ import { EnemySlot } from './enemy-slot';
 							{{ability.ticks}}/{{ability.cooldown}}
 						</div>
 					</div>
+					<div class="description">
+						<div class="abilityDescription">
+							{{ability.description}}
+						</div>
+						<div class="listSlot" *ngFor="let stat of ability.stats">
+							<div class="statName">
+								{{stat.name}}
+							</div>
+							<div class="statPower">
+								{{stat.power}}
+							</div>
+							<div class="description noMoveOver">
+								{{stat.description}}
+							</div>
+						</div>
+						<div class="listSlot" *ngFor="let effect of ability.effects">
+							<div class="effectName">
+								{{effect.name}}
+							</div>
+							<div class="description">
+								<div class="abilityDescription">
+									{{effect.description}}
+								</div>
+								<div class="listSlot" *ngFor="let stat of effect.stats">
+									<div class="statName">
+										{{stat.name}}
+									</div>
+									<div class="statPower">
+										{{stat.power}}
+									</div>
+									<div class="description noMoveOver">
+										{{stat.description}}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 			<div class="effects">
@@ -65,6 +102,22 @@ import { EnemySlot } from './enemy-slot';
 					</div>
 					<div *ngIf="effect.ticks == undefined">
 						Indefinite
+					</div>
+					<div class="description">
+						<div class="abilityDescription">
+							{{effect.description}}
+						</div>
+						<div class="listSlot" *ngFor="let stat of effect.stats">
+							<div class="statName">
+								{{stat.name}}
+							</div>
+							<div class="statPower">
+								{{stat.power}}
+							</div>
+							<div class="description noMoveOver">
+								{{stat.description}}
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -146,7 +199,6 @@ import { EnemySlot } from './enemy-slot';
 		
 		.description {
 			border: 2px solid;
-			margin: 1px;
 			padding: 2px;
 			background-color: #f6f6f6;
 			display: none;
@@ -155,12 +207,16 @@ import { EnemySlot } from './enemy-slot';
 			z-index: 100;
 		}
 		
-		.listSlot:hover .description {
+		.listSlot:hover>.description {
 			display: block;
 		}
 		
-		.listSlot:hover .description:hover {
+		.listSlot:hover>.description.noMoveOver:hover {
 			display: none;
+		}
+		
+		.abilityDescription {
+			border-bottom: 2px solid;
 		}
 	`]
 })

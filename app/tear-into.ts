@@ -3,6 +3,7 @@ import { GameInfo } from './game-info';
 import { HeroSlot } from './hero-slot';
 import { EnemySlot } from './enemy-slot';
 import { EffectInfo } from './effect-info.interface';
+import { Stat } from './stat';
 
 export class TearInto implements Ability {
 	name: string;
@@ -10,17 +11,30 @@ export class TearInto implements Ability {
 	ticks: number;
 	power: number;
 	hits: number;
+	targets: number;
+	description: string;
 	
 	effects: EffectInfo[];
 	
-	constructor(cd: number, pwr: number, hits: number, eff: EffectInfo[]) {
-		this.name = 'Tear Into';
+	stats: Stat[];
+	
+	constructor(nm: string, cd: number, pwr: number, hits: number, trg: number, eff: EffectInfo[], desc: string) {
+		this.name = nm;
 		this.cooldown = cd;
 		this.ticks = 0;
 		this.power = pwr;
 		this.hits = hits;
+		this.targets = trg;
+		this.description = desc;
 		
 		this.effects = eff;
+		
+		this.stats = [
+			new Stat('Cooldown', 'How many ticks it takes for the ability to be used.', cd),
+			new Stat('Power', 'The amount of damage this attack will do per hit.', pwr),
+			new Stat('Targets', 'The number of opponents that this ability targets', trg),
+			new Stat('Hits', 'The amount of times the attack hits the same target', hits)
+		];
 	}
 	nextTick(spd: number, game: GameInfo, user: any): void {
 		this.ticks += spd;
@@ -35,8 +49,9 @@ export class TearInto implements Ability {
 			if (targets.length > 0) {
 				let trg = targets[Math.floor(Math.random() * targets.length)]
 				for (let x = 0; x < this.hits; x++) {
-					trg.takeHit(this.power, this.effects);
+					trg.takeHit(this.power, []);
 				}
+				trg.takeHit(0, this.effects);
 			}
 		}
 		else {
@@ -44,8 +59,9 @@ export class TearInto implements Ability {
 			if (targets.length > 0) {
 				let trg = targets[Math.floor(Math.random() * targets.length)]
 				for (let x = 0; x < this.hits; x++) {
-					trg.takeHit(this.power, this.effects);
+					trg.takeHit(this.power, []);
 				}
+				trg.takeHit(0, this.effects);
 			}
 		}
 	}

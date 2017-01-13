@@ -6,7 +6,7 @@ import { StrikeInfo } from './strike-info';
 import { EffectInfo } from './effect-info.interface';
 
 export class WarriorInfo implements HeroInfo {
-	maxHealth: number = 100;
+	maxHealth: number = 400;
 	
 	speedPriority: number = 1;
 	damagePriority: number = 5;

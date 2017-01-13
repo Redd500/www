@@ -3,7 +3,7 @@ var warrior_1 = require('./warrior');
 var strike_info_1 = require('./strike-info');
 var WarriorInfo = (function () {
     function WarriorInfo() {
-        this.maxHealth = 100;
+        this.maxHealth = 400;
         this.speedPriority = 1;
         this.damagePriority = 5;
         this.defense = 2;

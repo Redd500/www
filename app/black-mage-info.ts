@@ -8,9 +8,9 @@ import { LightningBoltInfo } from './lightning-bolt-info';
 import { BlizzardInfo } from './blizzard-info';
 
 export class BlackMageInfo implements HeroInfo {
-	maxHealth: number = 20;
+	maxHealth: number = 80;
 	
-	speedPriority: number = 0.6;
+	speedPriority: number = 1;
 	damagePriority: number = 2;
 	
 	abilities: AbilityInfo[] = [ new FireballInfo(), new LightningBoltInfo(), new BlizzardInfo() ];

@@ -1,27 +1,37 @@
 import { Ability } from './ability.interface';
 import { GameInfo } from './game-info';
-import { Hero } from './hero.interface';
-import { Enemy } from './enemy.interface';
 import { HeroSlot } from './hero-slot';
 import { EnemySlot } from './enemy-slot';
 import { EffectInfo } from './effect-info.interface';
-import { Effect } from './effect.interface';
+import { Stat } from './stat';
 
 export class Fireball implements Ability {
 	name: string;
 	cooldown: number;
 	ticks: number;
 	power: number;
+	targets: number;
+	description: string;
 	
 	effects: EffectInfo[];
 	
-	constructor(cd: number, pwr: number, eff: EffectInfo[]) {
-		this.name = 'Fireball';
+	stats: Stat[];
+	
+	constructor(nm:string, cd: number, pwr: number, trg: number, eff: EffectInfo[], desc: string) {
+		this.name = nm;
 		this.cooldown = cd;
 		this.ticks = 0;
 		this.power = pwr;
+		this.targets = trg;
+		this.description = desc;
 		
 		this.effects = eff;
+		
+		this.stats = [
+			new Stat('Cooldown', 'How many ticks it takes for the ability to be used.', cd),
+			new Stat('Power', 'The amount of damage this attack will do per hit.', pwr),
+			new Stat('Targets', 'The number of opponents that this ability targets', trg)
+		];
 	}
 	nextTick(spd: number, game: GameInfo, user: any): void {
 		this.ticks += spd;

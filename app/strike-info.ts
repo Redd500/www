@@ -3,11 +3,13 @@ import { Ability } from './ability.interface';
 import { Strike } from './strike';
 
 export class StrikeInfo implements AbilityInfo {
+	name: string = 'Strike';
 	cooldown: number = 3;
-	targets: number = 1;
 	power: number = 10;
+	targets: number = 1;
+	description: string = 'A simple attack.';
 	
 	createAbility(): Ability {
-		return new Strike(this.cooldown, this.targets, this.power);
+		return new Strike(this.name, this.cooldown, this.power, this.targets, this.description);
 	}
 }

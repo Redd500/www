@@ -1,10 +1,15 @@
 "use strict";
+var stat_1 = require('./stat');
 var Stun = (function () {
-    function Stun(tcks) {
-        this.name = 'Stun';
+    function Stun(nm, tcks, desc) {
+        this.name = nm;
         this.maxTicks = tcks;
         this.ticks = tcks;
         this.stun = 1;
+        this.description = desc;
+        this.stats = [
+            new stat_1.Stat('Max Ticks', 'How long this status effect lasts when first applied.', tcks)
+        ];
     }
     Stun.prototype.applyEffectBefore = function (game, affected) {
         var numStuns = 0;
